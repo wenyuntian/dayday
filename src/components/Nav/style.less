@@ -19,4 +19,53 @@
       font-weight: 600;
     }
   }
+
+  .slider-icon {
+    display: none;
+    position: absolute;
+    top: 22px;
+    right: 24px;
+    z-index: 99;
+  }
 }
+
+.slider-nav-list {
+    display: none;
+    margin: 0;
+    padding: 90px 0 0 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 768px;
+    right: -768px;
+    text-align: center;
+    list-style-type: none;
+    background: #101012;
+    transition: left .2s;
+    z-index: 999;
+    overflow-y: hidden;
+
+    .slider-title {
+      font-size: 24px;
+      margin: 0;
+    }
+    li {
+      height: 48px;
+      line-height: 48px;
+      color: #fff;
+    }
+}
+
+// 响应式代码
+@media (max-width: 767px) {
+  .nav-bar{
+    .nav-list {
+      display: none;
+    }
+
+    .slider-icon, .slider-nav-list {
+      display: block;
+    }
+  }
+}
+

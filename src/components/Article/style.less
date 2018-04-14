@@ -1,0 +1,87 @@
+.article {
+  color: #616161;
+  margin-top: 55px;
+  position: relative;
+
+  .article-header {
+    position: relative;
+
+    .article-heaer-tag {
+      .article-source {
+        display: inline-block;
+        margin-left: -33px;
+        margin-right: 10px;
+        padding: 0 6px;
+        font-size: 14px;
+        line-height: 22px;
+        border-radius: 11px;
+        background-color: #ffcdd2
+      }
+
+      a {
+        display: inline-block;
+        height: 22px;
+        line-height: 22px;
+        padding: 0 8px;
+        margin-right: 12px;
+        border-radius: 4px;
+        background-color: #1565c0;
+        color: #fff;
+        font-size: 14px;
+      }
+    }
+
+    .aiticle-time {
+      position: absolute;
+      width: 160px;
+      top: 38px;
+      left: -250px;
+      text-align: right;
+      letter-spacing: 2px;
+      color: #adabac;
+    }
+
+    .article-title {
+      color: #212121;
+      margin: 8px 0;
+    }
+
+    .article-title:before {
+      content: "";
+      position: absolute;
+      left: -54px;
+      top: 40px;
+      height: 11px;
+      width: 11px;
+      background-color: #fff;
+      border: 1px solid #adabac;
+      border-radius: 50%;
+    }
+  }
+
+  .article-content {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .look-more {
+    font-size: 14px;
+    color: #1565c0;
+  }
+}
+
+.article:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  top: 0;
+  height: 100%;
+  left: -48px;
+  background-color: #d4d3d3;
+}
+
+@media (max-width: 768px) {
+  .article:before, .article-title:before, .article-source {
+    display: none!important;
+  }
+}
