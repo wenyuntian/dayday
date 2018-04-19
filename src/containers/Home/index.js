@@ -10,7 +10,7 @@ class Home extends Component {
     return (
       <div className="home-page">
         <Nav />
-        <Header />
+        <Header page="blog"/>
         <div className="article-list">
           <Article />
           <Article />

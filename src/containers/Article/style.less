@@ -1,0 +1,140 @@
+.article-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 480px;
+  margin-bottom: 90px;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  font-family: Helvetica Neue,Helvetica,Ubuntu,Arial,sans-serif;
+  color: #fff;
+  background-color: #000;
+  
+  .article-header-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-position: 50%;
+    background-position-x: 50%;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fadein 1s ease-in-out;
+    opacity: .3;
+  }
+
+  .article-header-title {
+    max-width: 720px;
+    z-index: 99;
+    margin: 0 auto;
+
+    .aritcle-tag {
+      text-align: center;
+
+      .article-source {
+        display: inline-block;
+        height: 22px;
+        width: 22px;
+        font-size: 14px;
+        line-height: 22px;
+        border-radius: 50%;
+        background-color: #ffcdd2
+      }
+
+      a {
+        display: inline-block;
+        height: 22px;
+        line-height: 22px;
+        padding: 0 8px;
+        background-color: #237bd9;
+        margin-left: 8px;
+        border-radius: 3px;
+        font-size: 14px;
+        
+      }
+
+      a:hover {
+        background-color: #1565c0;
+      }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      line-height: 48px;
+    }
+  }
+
+  .article-header-author {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 115px;
+    width: 100%;
+    right: 30px;
+    bottom: 25px;
+
+    .author-infor {
+      margin-right: 16px;
+      text-align: right;
+      font-size: 18px;
+      letter-spacing: 1px;
+      line-height: 28px;
+      color: #d4d3d3;
+    }
+    img {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      border: 2px solid #757575;
+    }
+  }
+}
+
+.md-content {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #212121;
+  font-size: 14px;
+  line-height: 22px;
+  
+  p {
+    letter-spacing: 1px;
+    margin: 0;
+
+    code {
+      background-color: #eeeeee;
+      padding: 1px 5px;
+      border-radius: 1px;
+      color: #e57373 ;
+    }
+  }
+
+  ul {
+    margin: 25px 0;
+    padding: 8px 32px;
+    font-size: 16px;
+    background: #f5f2f0;
+
+    li {
+      padding: 8px 0;
+    }
+  }
+
+  a {
+    color: #2979ff;
+  }
+}
+// 响应式代码
+@media (max-width: 767px) {
+  .article-header-author {
+    img {
+      display: none;
+    }
+  }
+}

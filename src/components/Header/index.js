@@ -13,7 +13,7 @@ class Header extends Component {
               <img src={headImg} alt="daydayUp"/>
             </div>
             <div className="author-title">
-              <div className="aritcle-count">12篇文章</div>
+              <div className="aritcle-count">{this.props.page==="blog" ? "12篇文章" : "12个作品"}</div>
               <h1>dayday的日志</h1>
               <ul className="link-list">
                 <li>
