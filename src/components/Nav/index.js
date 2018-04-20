@@ -13,7 +13,6 @@ class Nav extends Component {
   }
 
   handClick = () => {
-    console.log("aaa")
     this.setState(preState => ({
       sliderNav: !preState.sliderNav,
     }));

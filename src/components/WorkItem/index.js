@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
-import imgSrc from "../../images/header.png"
 import './style.less';
 
 class WorkItem extends Component {
   render() {
+    const {title, tag, codeSrc, viewSrc, thumbSrc} = this.props.workItem;
+
     return (
       <article className="work-item">
-        <a className="work-thumb" href="#">
-          <img src={imgSrc} alt="作品缩略图" />
+        <a className="work-thumb" href={codeSrc}>
+          <img src={thumbSrc} alt="作品缩略图" />
         </a>
         <div className="work-infor">
           <ul className="work-tag">
-            <li><a href="#">CSS</a></li>
-            <li><a href="#">ubuntu</a></li>
-            <li><a href="#">前端</a></li>
-            <li><a href="#">工具</a></li>
+            {tag
+            ? tag.map((p, index) => {
+              return <li key={index}><a href="qwew">{p}</a></li>
+            })
+            : ""
+            }
           </ul>
-          <h2 className="work-title"><a href="#">程序员偷懒指南 -- 使用 chrome 扩展实现前端资讯推送</a></h2>
+          <h2 className="work-title"><a href={codeSrc}>{title.length>50 ? `${title.slice(0,50)}...` : title}</a></h2>
           <div className="work-link">
-            <a className="preview" href="#">预览</a>
-            <a className="preview" href="#">源码</a>
+            {viewSrc
+            ? <a className="preview" href={viewSrc}>预览</a>
+            : ""
+            }
+            <a className="preview" href={codeSrc}>源码</a>
           </div>
         </div>
       </article>

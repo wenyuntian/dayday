@@ -1,0 +1,58 @@
+.archive {
+  margin: 16px;
+  color: #212121;
+
+  .archive-year {
+    font-size: 24px;
+  }
+
+  .archive-year {
+    margin: 0;
+  }
+
+  .archive-list {
+    list-style: none;
+    padding: 0;
+
+    li {
+      height: 32px;
+      line-height: 32px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+      time {
+        font-size: 18px;
+        color: #bdbdbd;
+      }
+
+      .item-name {
+        margin-left: 18px;
+        font-size: 18px;
+        color: #1e88e5;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .archive {
+    .archive-year {
+      font-size: 18px;
+    }
+
+    .archive-list {
+
+      li {
+
+        time {
+          font-size: 14px;
+        }
+
+        .item-name {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

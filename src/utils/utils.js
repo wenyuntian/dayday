@@ -43,14 +43,9 @@ export default {
   postData (url, data) {
     return axios({
       method: 'post',
-      baseURL: 'http://localhost:3000/',
       url,
       data: qs.stringify(data),
       timeout: 10000,
-      headers: {
-        'X-Requested-With': 'XMLHttpRequest',
-        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-      }
     }).then(
       (response) => {
         return checkStatus(response)
@@ -64,13 +59,9 @@ export default {
   getData (url, params) {
     return axios({
       method: 'get',
-      baseURL: 'http://localhost:3000/',
       url,
       params, // get 请求时带的参数
       timeout: 10000,
-      headers: {
-        'X-Requested-With': 'XMLHttpRequest'
-      }
     }).then(
       (response) => {
         return checkStatus(response)

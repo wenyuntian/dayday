@@ -1,32 +1,41 @@
 import React from 'react';
 import Loadable from 'react-loadable';
+import Loading from './components/Loading';
 
-const Loading = () => <div className="page-loading">Loading...</div>;
+const Loadible = () => <Loading></Loading>
 
 export const createRoutes = () => {
   const home = {
     path: '/',
     component: Loadable({
       loader: () => import('./containers/Home'),
-      loading: Loading,
+      loading: Loadible,
     }),
     exact: true,
   };
-  const tagPost = {
+  const works = {
     path: '/works',
     component: Loadable({
       loader: () => import('./containers/Works'),
-      loading: Loading,
+      loading: Loadible,
     }),
     exact: true,
   };
   const article = {
-    path: '/articles',
+    path: '/article/:postName',
     component: Loadable({
       loader: () => import('./containers/Article'),
-      loading: Loading,
+      loading: Loadible,
     }),
     exact: true,
   };
-  return [home, tagPost, article];
+  const archive = {
+    path: '/archive',
+    component: Loadable({
+      loader: () => import('./containers/Archive'),
+      loading: Loadible,
+    }),
+    exact: true,
+  };
+  return [home, works, article, archive];
 };

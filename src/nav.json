@@ -1,14 +1,14 @@
 [
   {
-    "title": "档案",
-    "href": "www.baidu.com"
+    "title": "日志",
+    "href": "/"
   },
   {
-    "title": "日志",
-    "href": "www.baidu.com"
+    "title": "档案",
+    "href": "/archive"
   },
   {
     "title": "作品",
-    "href": "www.baidu.com"
+    "href": "/works"
   }
 ]
